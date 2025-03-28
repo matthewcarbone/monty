@@ -484,7 +484,7 @@ def save(
         outfile.write(encoded)
 
     # Save the pickle file if we have anything to save from the name_object_map
-    if name_object_map is not None:
+    if name_object_map is not None and len(name_object_map) > 0:
         with open(pickle_path, "wb") as f:
             pickle.dump(name_object_map, f, **pickle_kwargs)
 
